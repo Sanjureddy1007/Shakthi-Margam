@@ -1,0 +1,1 @@
+I am unable to access the content from growamerica.org due to a security check requiring JavaScript and cookies to be enabled. Since I cannot bypass these security measures, I cannot analyze the content for information related to signs of cash flow challenges for businesses, especially those in growth phases.

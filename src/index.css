@@ -1,0 +1,4 @@
+/* Import animations - must come before Tailwind directives */
+@import './styles/animations.css';
+
+
