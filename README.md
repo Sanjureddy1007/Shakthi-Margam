@@ -37,7 +37,7 @@ Shakti Margam is an AI-powered platform designed to support women entrepreneurs 
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/shakti-margam.git
+   git clone https://github.com/Sanjureddy1007/Shakthi-Margam.git
    cd shakti-margam
    ```
 
