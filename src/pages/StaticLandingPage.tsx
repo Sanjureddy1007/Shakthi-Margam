@@ -212,100 +212,11 @@ const StaticLandingPage: React.FC = () => {
       {/* Splash screen redirect for first-time visitors */}
       <SplashRedirect />
 
-      {/* Include the CSS styles inline */}
-      <style>
-        {`
-          /* Custom styles - Updated to match Pochampally pattern style */
-          .bg-primary { background-color: #00695C; }
-          .bg-primary-light { background-color: #E0F2F1; }
-          .bg-primary-dark { background-color: #004D40; }
-          .text-primary { color: #00695C; }
-          .bg-accent1 { background-color: #D81B60; }
-          .bg-accent1-light { background-color: #FCE4EC; }
-          .bg-accent2 { background-color: #FFC107; }
-          .bg-accent2-light { background-color: #FFF8E1; }
-          .bg-accent3 { background-color: #FF5722; }
-          .bg-accent3-light { background-color: #FBE9E7; }
-          .bg-accent4 { background-color: #5E35B1; }
-          .bg-accent4-light { background-color: #EDE7F6; }
-
-          /* Border colors */
-          .border-primary { border-color: #00695C; }
-
-          /* Float animation for phone mockup */
-          @keyframes float {
-              0% { transform: translateY(0px); }
-              50% { transform: translateY(-10px); }
-              100% { transform: translateY(0px); }
-          }
-          .float-animation {
-              animation: float 6s ease-in-out infinite;
-          }
-
-          /* Gradient background - Updated to match Pochampally pattern style */
-          .bg-gradient-hero {
-              background: linear-gradient(to bottom, #E0F2F1, #FFFFFF);
-          }
-
-          .bg-gradient-cta {
-              background: linear-gradient(to right, #00695C, #D81B60);
-          }
-
-          /* Pochampally pattern overlay */
-          .pochampally-overlay {
-              background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300695C' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-          }
-
-          /* Card hover effect */
-          .feature-card {
-              transition: transform 0.3s ease, box-shadow 0.3s ease;
-          }
-          .feature-card:hover {
-              transform: translateY(-5px);
-              box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-          }
-
-          /* Typing indicator animation */
-          .typing-indicator .dot {
-              display: inline-block;
-              width: 8px;
-              height: 8px;
-              border-radius: 50%;
-              background-color: #00695C;
-              margin-right: 4px;
-              animation: typing 1.4s infinite ease-in-out both;
-          }
-
-          .typing-indicator .dot:nth-child(1) {
-              animation-delay: 0s;
-          }
-
-          .typing-indicator .dot:nth-child(2) {
-              animation-delay: 0.2s;
-          }
-
-          .typing-indicator .dot:nth-child(3) {
-              animation-delay: 0.4s;
-          }
-
-          @keyframes typing {
-              0%, 80%, 100% {
-                  transform: scale(0.6);
-                  opacity: 0.6;
-              }
-              40% {
-                  transform: scale(1);
-                  opacity: 1;
-              }
-          }
-        `}
-      </style>
-
       {/* Header Section */}
       <header className="bg-white shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
           <div className="flex items-center">
-            <img src="/logo.png" alt="Shakti Margam Logo" className="h-15 mr-3" style={{ height: "60px" }} />
+            <img src="/logo.png" alt="Shakti Margam Logo" className="h-15 mr-3" />
             <div>
               <h1 className="text-2xl font-bold text-primary">Shakti Margam</h1>
               <p className="text-sm text-gray-500">Empowering Women Entrepreneurs in Telangana</p>
@@ -333,7 +244,7 @@ const StaticLandingPage: React.FC = () => {
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-hero">
           {/* Pochampally Ikat Pattern Background */}
-          <div className="absolute inset-0 opacity-15 pochampally-overlay"></div>
+          <div className="absolute inset-0 opacity-15 pattern-pochampally"></div>
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-24 md:pt-24 md:pb-32">
             <div className="flex flex-col md:flex-row items-center">
@@ -352,7 +263,6 @@ const StaticLandingPage: React.FC = () => {
                     onClick={() => window.redirectToAssistant()}
                     variant="primary"
                     size="large"
-                    className="text-center"
                     ariaLabel="Get Started"
                   >
                     Get Started
@@ -363,7 +273,6 @@ const StaticLandingPage: React.FC = () => {
                     }}
                     variant="outline"
                     size="large"
-                    className="text-center"
                     ariaLabel="Explore Features"
                   >
                     Explore Features
@@ -386,7 +295,7 @@ const StaticLandingPage: React.FC = () => {
                         </div>
                       </div>
                       {/* Chat Interface */}
-                      <div className="p-4 bg-gray-50 h-96">
+                      <div className="p-4 bg-gray-50 h-[24rem] overflow-y-auto">
                         <div className="mb-4">
                           <div className="bg-accent1-light text-gray-800 p-3 rounded-lg rounded-tl-none max-w-xs ml-auto">
                             <p>Hi, I need help with my business strategy.</p>
@@ -756,7 +665,7 @@ const StaticLandingPage: React.FC = () => {
                       <h3 className="text-lg font-semibold mb-3">Subscribe to our Newsletter</h3>
                       <p className="text-gray-600 mb-4">Get the latest updates and resources for women entrepreneurs.</p>
                       <form onSubmit={(e) => window.handleFormSubmit(e, 'newsletter')}>
-                        <div className="flex">
+                        <div className="flex flex-wrap">
                           <input type="email" name="email" placeholder="Your email address" required
                             className="flex-grow px-4 py-2 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" />
                           <button type="submit"
