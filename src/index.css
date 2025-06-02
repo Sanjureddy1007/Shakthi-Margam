@@ -1,4 +1,30 @@
-/* Import animations - must come before Tailwind directives */
+@tailwind base;
+
+/* Box-sizing reset */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Additional base styles can be added here if necessary */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@tailwind components;
+@tailwind utilities;
+
+/* Import custom stylesheets */
 @import './styles/animations.css';
-
-
+@import './styles/pochampally-patterns.css';
+@import './styles/custom.css';
+@import './styles/scrollFix.css'; /* Assuming this might be relevant based on previous discussions of scroll issues */
